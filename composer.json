@@ -4,6 +4,8 @@
     "keywords": ["zendesk", "symfony"],
 
     "license": "MIT",
+    
+    "minimum-stability": "dev",
 
     "authors": [
         {
