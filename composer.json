@@ -15,7 +15,6 @@
 
     "version": "0.0.1",
 
-    "minimum-stability": "dev",
     "target-dir": "Dlin/Bundle/ZendeskBundle",
 
     "autoload": {
