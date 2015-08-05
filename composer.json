@@ -33,7 +33,7 @@
     },
     "repositories": [
         {
-            "type": "git",
+            "type": "vcs",
             "url": "https://github.com/rdarricau/zendesk"
         }
     ]
