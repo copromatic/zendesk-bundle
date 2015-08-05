@@ -1,5 +1,5 @@
 {
-    "name": "dlin/zendesk-bundle",
+    "name": "rdarricau/zendesk-bundle",
     "description": "A Syfmony 2 Bundle for Dlin Zendesk client library",
     "keywords": ["zendesk", "symfony"],
 
@@ -24,13 +24,19 @@
 
     "require": {
         "php": ">=5.3.8",
-        "dlin/zendesk": ">=0.0.1"
+        "rdarricau/zendesk": ">=0.0.1"
     },
 
     "require-dev": {
         "symfony/framework-bundle": ">=2.0",
         "symfony/finder": "2.3.*"
-    }
+    },
+    "repositories": [
+        {
+            "type": "git",
+            "url": "https://github.com/rdarricau/zendesk"
+        }
+    ],
 
 
 }
