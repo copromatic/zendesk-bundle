@@ -1,5 +1,5 @@
 {
-    "name": "rdarricau/zendesk-bundle",
+    "name": "dlin/zendesk-bundle",
     "description": "A Syfmony 2 Bundle for Dlin Zendesk client library",
     "keywords": ["zendesk", "symfony"],
 
@@ -24,7 +24,7 @@
 
     "require": {
         "php": ">=5.3.8",
-        "rdarricau/zendesk": "dev-master"
+        "dlin/zendesk": "dev-master"
     },
 
     "require-dev": {
