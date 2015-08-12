@@ -1,0 +1,19 @@
+{% trans_default_domain 'DlinZendeskBundle' %}
+<h1>Zendesk</h1>
+{% for categorie in categories %}
+    <h2><a href="{{ path('zendesk_bundle.categorie_show', { 'idCategorie': categorie.id }) }}">{{ categorie.name }}</a></h2>
+    <ul>
+        {% for section in sections %}
+            {% if categorie.id == section.categoryId %}
+                <li><a href="{{ path('zendesk_bundle.section_show', { 'idSection': section.id }) }}">{{ section.name }}</a></li>
+                <ul>
+                    {% for article in articles %}
+                        {% if article.sectionId == section.id %}
+                            <li><a href="{{ path('zendesk_bundle.article_show', { 'idArticle': article.id }) }}">{{ article.title }}</a></li>
+                        {% endif %}
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        {% endfor %}
+    </ul>
+{% endfor %}

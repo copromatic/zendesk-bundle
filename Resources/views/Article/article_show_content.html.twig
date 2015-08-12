@@ -1,0 +1,5 @@
+{% trans_default_domain 'DlinZendeskBundle' %}
+
+<h2>{{ article.title }}</h2>
+{{ article.body | raw }}
+<p>le {{ article.createdAt|date("d/m/Y") }}</p>

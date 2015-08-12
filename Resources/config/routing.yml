@@ -1,0 +1,10 @@
+zendesk_bundle.article_show:
+    path:  /article/{idArticle}
+    defaults: { _controller: DlinZendeskBundle:Article:show }
+
+zendesk_bundle.section_show:
+    path:  /section/{idSection}
+    defaults: { _controller: DlinZendeskBundle:Section:show }
+zendesk_bundle.categorie_show:
+    path:  /categorie/{idCategorie}
+    defaults: { _controller: DlinZendeskBundle:Categorie:show }

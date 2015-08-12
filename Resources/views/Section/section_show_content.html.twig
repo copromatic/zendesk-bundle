@@ -1,0 +1,8 @@
+{% trans_default_domain 'DlinZendeskBundle' %}
+
+<h2>{{ section.name }}</h2>
+<ul>
+    {% for article in articles %}
+        <li><a href="{{ path('zendesk_bundle.article_show', { 'idArticle': article.id }) }}">{{ article.title }}</a></li>
+    {% endfor %}
+</ul>
