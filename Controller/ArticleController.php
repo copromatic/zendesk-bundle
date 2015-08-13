@@ -3,6 +3,7 @@ namespace Dlin\Bundle\ZendeskBundle\Controller;
 
 use Dlin\Zendesk\Client\ArticleClient;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller as BaseController;
+use Symfony\Component\HttpFoundation\Request;
 
 /**
  * Controller managing articles
@@ -11,7 +12,11 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller as BaseController;
  */
 class ArticleController extends BaseController
 {
-    public function showAction($idArticle)
+
+    /*
+     * Var $request can be used to set cache
+     * */
+    public function showAction($idArticle, Request $request)
     {
         $api =  $this->get('dlin.zendesk')->getApi();
 

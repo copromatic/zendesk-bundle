@@ -1,0 +1,9 @@
+{% trans_default_domain 'DlinZendeskBundle' %}
+{{ form_start(form, { 'attr': {'id': 'search-form', 'role': 'form', 'method' : 'get'}}) }}
+<div class=""> {# class="form-group" for exemple#}
+    <div>{{ form_widget(form.mail, {'attr': {'placeholder': 'Mail' } }) }}</div>
+    <div>{{ form_widget(form.subject, {'attr': {'placeholder': 'Subject' } }) }}</div>
+    <div>{{ form_widget(form.description, {'attr': {'placeholder': 'Description' } }) }}</div>
+    <div>{{ form_widget(form.submit, {value : "Send", }) }}</div>
+</div>
+{{ form_end(form) }}

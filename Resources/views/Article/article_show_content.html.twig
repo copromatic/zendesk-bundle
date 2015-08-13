@@ -3,3 +3,4 @@
 <h2>{{ article.title }}</h2>
 {{ article.body | raw }}
 <p>le {{ article.createdAt|date("d/m/Y") }}</p>
+<p>Vous avez d’autres questions&nbsp;? <a href="{{ path('zendesk_bundle.request_new') }}">Envoyer une demande</a></p>
