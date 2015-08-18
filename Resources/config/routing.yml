@@ -2,16 +2,16 @@ home:
     path: /
     defaults: { _controller: DlinZendeskBundle:Home:home }
 
-zendesk_bundle.article_show:
-    path:  /article/{idArticle}{slug}
-    defaults: { _controller: DlinZendeskBundle:Article:show, slug: -title }
-
 zendesk_bundle.section_show:
-    path:  /section/{idSection}{slug}
-    defaults: { _controller: DlinZendeskBundle:Section:show, slug: -title }
+    path:  /s{idSection}/{slug}
+    defaults: { _controller: DlinZendeskBundle:Section:show, slug: title }
 zendesk_bundle.categorie_show:
-    path:  /categorie/{idCategorie}{slug}
-    defaults: { _controller: DlinZendeskBundle:Categorie:show, slug: -title }
+    path:  /c{idCategorie}/{slug}
+    defaults: { _controller: DlinZendeskBundle:Categorie:show, slug: title }
 zendesk_bundle.request_new:
     path:  /request/new
     defaults: { _controller: DlinZendeskBundle:Request:new }
+
+zendesk_bundle.article_show:
+    path:  /a{idArticle}/{slug}
+    defaults: { _controller: DlinZendeskBundle:Article:show, slug: title }

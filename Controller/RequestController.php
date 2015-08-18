@@ -43,21 +43,21 @@ class RequestController extends BaseController
         $form->handleRequest($request);
 
         if ($form->isValid()) {
-            //$api =  $this->get('dlin.zendesk')->getApi();
-//
-            //$ticketComment = new TicketComment();
-            //$ticketComment->setBody($form->get('description')->getData());
-//
-            //$ticket = new Ticket();
-            //$ticket->setSubject($form->get('subject')->getData());
-            //$ticket->setComment($ticketComment);
-//
-            //$ticketRequester = new TicketRequester();
-            //$ticketRequester->setEmail($form->get('mail')->getData());
-            //$ticketRequester->setName($form->get('mail')->getData());
-//
-            //$ticketClient = new TicketClient($api);
-            //$result = $ticketClient->save($ticket, $ticketRequester);
+            $api =  $this->get('dlin.zendesk')->getApi();
+
+            $ticketComment = new TicketComment();
+            $ticketComment->setBody($form->get('description')->getData());
+
+            $ticket = new Ticket();
+            $ticket->setSubject($form->get('subject')->getData());
+            $ticket->setComment($ticketComment);
+
+            $ticketRequester = new TicketRequester();
+            $ticketRequester->setEmail($form->get('mail')->getData());
+            $ticketRequester->setName($form->get('mail')->getData());
+
+            $ticketClient = new TicketClient($api);
+            $result = $ticketClient->save($ticket, $ticketRequester);
 
             $this->addFlash(
                 'notice',

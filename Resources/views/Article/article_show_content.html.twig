@@ -6,7 +6,7 @@
 <h3>Articles consultés récemment</h3>
 <ul>
     {% for lastArticle in lastRead %}
-        <li><a href="{{ path('zendesk_bundle.article_show', { 'idArticle': lastArticle.id }) }}-{{ lastArticle.title|replace({' ': '-'}) }}">{{ lastArticle.title }}</a></li>
+        <li><a href="{{ path('zendesk_bundle.article_show', { 'idArticle': lastArticle.id }) }}/{{ lastArticle.title|replace({' ': '-'}) }}">{{ lastArticle.title }}</a></li>
     {% endfor %}
 </ul>
 <p>Vous avez d’autres questions&nbsp;? <a href="{{ path('zendesk_bundle.request_new') }}">Envoyer une demande</a></p>
