@@ -5,9 +5,14 @@ home:
 zendesk_bundle.section_show:
     path:  /s{idSection}/{slug}
     defaults: { _controller: DlinZendeskBundle:Section:show, slug: title }
+    requirements:
+      idSection: "\d+"
 zendesk_bundle.categorie_show:
     path:  /c{idCategorie}/{slug}
     defaults: { _controller: DlinZendeskBundle:Categorie:show, slug: title }
+    requirements:
+      idCategorie: "\d+"
+
 zendesk_bundle.request_new:
     path:  /request/new
     defaults: { _controller: DlinZendeskBundle:Request:new }
